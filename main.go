@@ -63,7 +63,7 @@
 // actual changes are in packages goyacc is dependent on. Goyacc users should
 // rebuild the binary:
 //
-//	$ go get -u github.com/cznic/goyacc
+//	$ go get -u modernc.org/goyacc
 //
 // 2014-12-02: Added support for the optional yyLexerEx interface. The Reduced
 // method can be useful for debugging and/or automatically producing examples
@@ -120,7 +120,7 @@
 //
 //  [0]: http://golang.org/cmd/yacc/
 //  [1]: http://people.via.ecp.fr/~stilgar/doc/compilo/parser/Generating%20LR%20Syntax%20Error%20Messages.pdf
-//  [2]: http://godoc.org/github.com/cznic/y#hdr-Error_Examples
+//  [2]: http://godoc.org/modernc.org/y#hdr-Error_Examples
 //  [3]: http://www.gnu.org/software/bison/manual/html_node/Precedence-Only.html#Precedence-Only
 package main
 
@@ -140,11 +140,11 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/cznic/mathutil"
-	"github.com/cznic/parser/yacc"
-	"github.com/cznic/sortutil"
-	"github.com/cznic/strutil"
-	"github.com/cznic/y"
+	"modernc.org/mathutil"
+	"modernc.org/parser/yacc"
+	"modernc.org/sortutil"
+	"modernc.org/strutil"
+	"modernc.org/y"
 )
 
 var (
