@@ -20,12 +20,14 @@ type Parser struct {
 }
 
 func Parse() {
-	fmt.Println("haha")
+	fmt.Println("haha1")
 	sql := "select * from haha"
 	p := &Parser{cache: make([]yySymType, 200)}
 	var l yyLexer
 	l = &Scanner{}
 	p.src = sql
 	yyParse(l, p)
+	t := p.result[0].(*ast.SelectStmt)
+	fmt.Printf("t == %v\n", t.From)
 	fmt.Println(p)
 }
