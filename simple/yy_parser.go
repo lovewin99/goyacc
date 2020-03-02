@@ -27,7 +27,7 @@ func Parse() {
 	l = &Scanner{}
 	p.src = sql
 	yyParse(l, p)
-	t := p.result[0].(*ast.SelectStmt)
-	fmt.Printf("t == %v\n", t.From)
+	t := p.result[0].Text()
+	fmt.Printf("t == %v\n", t)
 	fmt.Println(p)
 }
