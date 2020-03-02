@@ -23,10 +23,10 @@ import (
 	StatementList		"statement list"
 	Field			"field expression"
 	TableRefsClause		"Table references clause"
-	Statement		"statement"
 
 %type	<statement>
 	SelectStmt		"SELECT statement"
+	Statement		"statement"
 
 %start	Start
 
@@ -77,7 +77,7 @@ SelectStmt:
 Statement:
 	SelectStmt
 	{
-		$$ = $1
+		$$ = $1.(*ast.SelectStmt)
 	}
 
 %%

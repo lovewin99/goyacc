@@ -314,8 +314,8 @@ yynewstate:
 	switch r {
 	case 2:
 		{
-			if yyS[yypt-0].item != nil {
-				s := yyS[yypt-0].item
+			if yyS[yypt-0].statement != nil {
+				s := yyS[yypt-0].statement
 				//			if lexer, ok := yylex.(stmtTexter); ok {
 				//				s.SetText(lexer.stmtText())
 				//			}
@@ -332,7 +332,7 @@ yynewstate:
 		}
 	case 6:
 		{
-			parser.yyVAL.item = yyS[yypt-0].statement
+			parser.yyVAL.statement = yyS[yypt-0].statement.(*ast.SelectStmt)
 		}
 
 	}
