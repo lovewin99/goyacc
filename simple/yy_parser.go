@@ -24,6 +24,7 @@ func Parse() {
 	sql := "select * from haha"
 	p := &Parser{cache: make([]yySymType, 200)}
 	var l yyLexer
+	l = &Scanner{}
 	p.src = sql
 	yyParse(l, p)
 	fmt.Println(p)
