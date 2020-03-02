@@ -9,3 +9,5 @@ require (
 	modernc.org/strutil v1.0.0
 	modernc.org/y v1.0.0
 )
+
+go 1.13
